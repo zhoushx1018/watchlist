@@ -1,33 +1,49 @@
+
 # Watchlist
 
-Example application for flask tutorial "[Flask 入门教程](http://helloflask.com/tutorial)".
+《[Flask入门](https://helloflask.com/tutorial/)》 
 
 Demo: http://watchlist.helloflask.com
 
 ![Screenshot](http://helloflask.com/screenshots/watchlist.png)
 
-## Installation
 
-clone:
+## 安装
+
+git clone源码
 ```
-$ git clone https://github.com/greyli/watchlist.git
-$ cd watchlist
-```
-create & active virtual enviroment then install dependencies:
-```
-$ python -m venv env  # use `virtualenv env` for Python2, use `python3 ...` for Python3 on Linux & macOS
-$ source env/bin/activate  # use `env\Scripts\activate` on Windows
-$ pip install -r requirements.txt
+$ git clone https://github.com/greyli/Watchlist.git
+$ cd Watchlist
 ```
 
-generate fake data then run:
+安装依赖
+```
+
+$ pip3 install -r requirements.txt
+```
+
+
+预先在DB生成数据
 ```
 $ flask forge
-$ flask run
-* Running on http://127.0.0.1:5000/
+
 ```
 
-## License
+启动http服务
 
-This project is licensed under the MIT License (see the
-[LICENSE](LICENSE) file for details).
+```
+## Running on http://0.0.0.0:8080/
+$ flask run -h 0.0.0.0  -p 8080 
+```
+
+在本地尝试访问服务
+
+```
+$ curl http://localhost:8080/hello
+```
+
+通过浏览器访问服务
+
+```
+http://IP:8080/hello/
+```
